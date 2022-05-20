@@ -1,86 +1,33 @@
 <template>
-  <div class="common-layout">
-    <el-container>
-      <el-aside width="200px">Aside</el-aside>
-      <el-main>Main</el-main>
-    </el-container>
-  </div>
-    <el-row>
-    <el-col :sm="12" :lg="6">
-      <el-result
-        icon="success"
-        title="Success Tip"
-        sub-title="Please follow the instructions"
-      >
-        <template #extra>
-          <el-button type="primary">Back</el-button>
-        </template>
-      </el-result>
+  <el-row>
+    <el-col :span="5">
+      <div class="grid-content bg-purple">
+        <div class="cell">按钮</div>
+      </div>
     </el-col>
-    <el-col :sm="12" :lg="6">
-      <el-result
-        icon="warning"
-        title="Warning Tip"
-        sub-title="Please follow the instructions"
-      >
-        <template #extra>
-          <el-button type="primary">Back</el-button>
-        </template>
-      </el-result>
+    <el-col :span="13" class="container">
+      <div class="grid-content bg-purple-light">2</div>
     </el-col>
-    <el-col :sm="12" :lg="6">
-      <el-result
-        icon="error"
-        title="Error Tip"
-        sub-title="Please follow the instructions"
-      >
-        <template #extra>
-          <el-button type="primary">Back</el-button>
-        </template>
-      </el-result>
-    </el-col>
-    <el-col :sm="12" :lg="6">
-      <el-result icon="info" title="Info Tip">
-        <template #sub-title>
-          <p>Using slot as subtitle</p>
-        </template>
-        <template #extra>
-          <el-button type="primary">Back</el-button>
-        </template>
-      </el-result>
+    <el-col :span="6">
+      <div class="grid-content bg-purple">3</div>
     </el-col>
   </el-row>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
+import { ref } from "vue";
+const title = ref("Hello");
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+<style scoped style="scss">
+.cell {
+  padding: 10px;
+  width: 120px;
+  margin: 0 auto;
+  cursor: pointer;
+  background: #fcd;
 }
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
+.container{
+  background: #f3f4f6;
 }
 </style>

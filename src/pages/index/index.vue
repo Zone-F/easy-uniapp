@@ -1,33 +1,24 @@
 <template>
   <el-row>
-    <el-col :span="5">
-      <div class="grid-content bg-purple">
-        <div class="cell">按钮</div>
-      </div>
-    </el-col>
-    <el-col :span="13" class="container">
-      <div class="grid-content bg-purple-light">2</div>
-    </el-col>
     <el-col :span="6">
-      <div class="grid-content bg-purple">3</div>
+      <div>应用列表</div>
+    </el-col>
+    <el-col :span="18">
+      <div>头部导航栏</div>
+      <div>
+        <el-tabs v-model="contentTabsActive">
+          <el-tab-pane label="页面管理" name="pageDesgin">
+            页面管理
+          </el-tab-pane>
+        </el-tabs>
+        <div>app列表</div>
+      </div>
     </el-col>
   </el-row>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-const title = ref("Hello");
+import { contentTabs, contentTabsActive } from "./index";
 </script>
 
-<style scoped style="scss">
-.cell {
-  padding: 10px;
-  width: 120px;
-  margin: 0 auto;
-  cursor: pointer;
-  background: #fcd;
-}
-.container{
-  background: #f3f4f6;
-}
-</style>
+<style lang="scss" scoped></style>
